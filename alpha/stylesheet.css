@@ -1,0 +1,43 @@
+html {
+    background-color: white;
+    color:darkslategray;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    margin: auto;
+    padding: 20px 10%;
+    text-align: left;
+}
+h3 {
+    padding-left: 5%;
+}
+#header {
+    text-align: center;
+}
+#box {
+    display: grid;
+    grid-template-columns: max-content;
+    grid-template-rows: 70%;
+    grid-template-areas: 
+    "trigger"
+    "rules"
+    "feedback"
+    "loops"
+    "modes";
+}
+hr {
+    color:mediumaquamarine;
+}
+#spacer {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    color:black;
+}
+a {
+    color:mediumaquamarine;
+}
+
+img {
+    border: 3px solid mediumaquamarine;
+    width: 100px;
+  } 
