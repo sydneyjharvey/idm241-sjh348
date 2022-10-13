@@ -28,16 +28,113 @@ h3 {
 hr {
     color:mediumaquamarine;
 }
-#spacer {
-    margin-top: 100px;
-    margin-bottom: 100px;
-    color:black;
-}
 a {
     color:mediumaquamarine;
 }
 
-img {
+.images {
     border: 3px solid mediumaquamarine;
     width: 100px;
-  } 
+    position:relative;
+}
+
+.spacer {
+    height:100px;
+}
+
+#element {
+    top: 0px;
+}
+#cart_locate {
+    width: 23px;
+    height: 21px;
+    left:26px;
+    top: 37px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#pointer_locate {
+    width: 52;
+    height: 47;
+    left:0px;
+    top: 50px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#circle_locate {
+    width: 55px;
+    height: 55px;
+    left:10.5px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cart {
+    width: 100%;
+}
+.cartanim {
+    animation: cartanim .5s forwards;
+}
+@keyframes cartanim {
+    0% {transform: rotate(0deg);}
+    33% {transform: rotate(-15deg);}
+    66% {transform: rotate(15deg);}
+    100% {transform: rotate(0deg);}
+}
+.cartanim2 {
+    animation: cartanim .5s backwards;
+}
+@keyframes cartanim2 {
+    0% {transform: rotate(0deg);}
+    33% {transform: rotate(-15deg);}
+    66% {transform: rotate(15deg);}
+    100% {transform: rotate(0deg);}
+}
+
+#pointer {
+    width: 100%;
+    opacity: 0%;
+}
+.pointeranim {
+    animation: pointeranim .5s forwards;
+}
+@keyframes pointeranim {
+    0% {opacity: 0%;}
+    70% {transform: translateY(30px);}
+    100% {transform: translateY(25px); opacity: 100%;}
+}
+.pointeranim2 {
+    animation: pointeranim .5s backwards;
+}
+@keyframes pointeranim2 {
+    0% {opacity: 0%;}
+    70% {transform: translateY(30px);}
+    100% {transform: translateY(25px); opacity: 100%;}
+}
+
+#circle {
+    width: 100%;
+    opacity: 0%;
+}
+.circleanim {
+    animation: circleanim .5s forwards;
+}
+@keyframes circleanim {
+    0% {width: 0%; opacity: 0%;}
+    70% {width: 100%; opacity: 70%;}
+    100% {width: 91%; opacity: 100%;} 
+}
+.circleanim2 {
+    animation: circleanim .5s backwards;
+}
+@keyframes circleanim2 {
+    0% {width: 0%; opacity: 0%;}
+    70% {width: 100%; opacity: 70%;}
+    100% {width: 91%; opacity: 100%;} 
+}
