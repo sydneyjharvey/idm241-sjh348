@@ -38,3 +38,66 @@ async function cartLeave() {
     circle.classList.remove("circleanim");
     cart_items.classList.remove("cart_itemsanim");
 }
+
+document.getElementById("gourdimg").addEventListener("mouseenter", gourdEnter);
+
+async function gourdEnter() {
+    console.log("gourdEnter");
+    await sleep(50);
+    gourdimg.classList.add("gourdanim");
+    console.log("2");
+    await sleep(50);
+    gourdimg.classList.remove("gourdanim2");
+}
+document.getElementById("gourdimg").addEventListener("mouseleave", gourdLeave);
+
+async function gourdLeave() {
+    console.log("gourdLeave");
+    await sleep(50);
+    gourdimg.classList.add("gourdanim2");
+    console.log("2");
+    await sleep(50);
+    gourdimg.classList.remove("gourdanim");
+}
+
+document.getElementById("keycapimg").addEventListener("mouseenter", keycapEnter);
+
+async function keycapEnter() {
+    console.log("keycapEnter");
+    await sleep(50);
+    keycapimg.classList.add("keycapanim");
+    console.log("2");
+    await sleep(50);
+    keycapimg.classList.remove("keycapanim2");
+}
+document.getElementById("keycapimg").addEventListener("mouseleave", keycapLeave);
+
+async function keycapLeave() {
+    console.log("keycapLeave");
+    await sleep(50);
+    keycapimg.classList.add("keycapanim2");
+    console.log("2");
+    await sleep(50);
+    keycapimg.classList.remove("keycapanim");
+}
+
+document.getElementById("buttonsimg").addEventListener("mouseenter", buttonsEnter);
+
+async function buttonsEnter() {
+    console.log("buttonsEnter");
+    await sleep(50);
+    buttonsimg.classList.add("buttonsanim");
+    console.log("2");
+    await sleep(50);
+    buttonsimg.classList.remove("buttonsanim2");
+}
+document.getElementById("buttonsimg").addEventListener("mouseleave", buttonsLeave);
+
+async function buttonsLeave() {
+    console.log("buttonsLeave");
+    await sleep(50);
+    buttonsimg.classList.add("buttonsanim2");
+    console.log("2");
+    await sleep(50);
+    buttonsimg.classList.remove("buttonsanim");
+}

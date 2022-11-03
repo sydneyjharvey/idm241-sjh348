@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-    <title>Alpha Build</title>
+    <title>Beta Build</title>
 </head>
 <body>
     <div id="element">
@@ -14,15 +14,15 @@
             <div id="box_locate"><img alt="box" src="Images/Box.png"></div>
             <div id="gourd_locate">
                 <div id="gourd_img" class="gourd"><img alt="gourd" src="Images/gourd.png"></div>
-                <div id="gourd_overlay" class="gourd"><img alt="gourd overlay" src="Images/Overlay 1.png"></div>
+                <div id="gourd_overlay" class="gourd"><img id="gourdimg" alt="gourd overlay" src="Images/Overlay 1.png"></div>
             </div>
             <div id="keycap_locate">
                 <div id="keycap_img" class="keycap"><img alt="keycap" src="Images/caps.png"></div>
-                <div id="keycap_overlay" class="keycap"><img alt="keycap overlay" src="Images/Overlay 2.png"></div>
+                <div id="keycap_overlay" class="keycap"><img id="keycapimg" alt="keycap overlay" src="Images/Overlay 2.png"></div>
             </div>
             <div id="buttons_locate">
                 <div id="buttons_locate" class="buttons"><img alt="buttons" src="Images/buttons.png"></div>
-                <div id="buttons_overlay" class="buttons"><img alt="buttons overlay" src="Images/Overlay 3.png"></div>
+                <div id="buttons_overlay" class="buttons"><img id="buttonsimg" alt="buttons overlay" src="Images/Overlay 3.png"></div>
             </div>
         </div>
         <div id="circle_locate"><img id="circle" alt="circle" src="Images/etsy icon circle.png"></div>
@@ -42,12 +42,12 @@
     <hr>
     <div id="rules" class="box">
         <h3>Rules:</h3>
-        <p>When hovering over the cart icon, A gray circle centered behind cart goes from width:0% to width:100%, then to width:91% as a pulse animation. A pointer graphic labeled “Cart” goes from opacity:0% to opacity:100% and moves 30px down, then back up 5px as a bounce animation. The cart rotates to -15deg, then to 15deg, then to 0deg as a wobble animation. These animations reverse when hovering off the cart, but do not loop.</p>
+        <p>When hovering over the cart icon, A gray circle centered behind cart goes from width:0% to width:100%, then to width:91% as a pulse animation. A pointer graphic labeled “Cart” goes from opacity:0% to opacity:100% and moves 30px down, then back up 5px as a bounce animation. The cart rotates to -15deg, then to 15deg, then to 0deg as a wobble animation. A box containing preview images of the items in the user's cart slides in from the left, grows in width, and grows in opacity from 0% to 100%. When a preview image is hovered over with the mouse, an overlay appears over it stating information on that item. These animations reverse when hovering off the subject, wether the preview image or the cart, but do not loop.</p>
     </div>
     <hr>
     <div id="feedback" class="box">
         <h3>Feedback:</h3>
-        <p>When hovering over the cart icon, A gray circle centered behind cart goes from width:0% to width:100%, then to width:91% as a pulse animation. A pointer graphic labeled “Cart” goes from opacity:0% to opacity:100% and moves 30px down, then back up 5px as a bounce animation. The cart rotates to -15deg, then to 15deg, then to 0deg as a wobble animation. These animations reverse when hovering off the cart, but do not loop.</p>
+        <p>When hovering over the cart icon, A gray circle centered behind cart goes from width:0% to width:100%, then to width:91% as a pulse animation. A pointer graphic labeled “Cart” goes from opacity:0% to opacity:100% and moves 30px down, then back up 5px as a bounce animation. The cart rotates to -15deg, then to 15deg, then to 0deg as a wobble animation. A box containing preview images of the items in the user's cart slides in from the left, grows in width, and grows in opacity from 0% to 100%. When a preview image is hovered over with the mouse, an overlay appears over it stating information on that item. These animations reverse when hovering off the subject, wether the preview image or the cart, but do not loop.</p>
     </div>
     <hr>
     <div id="loops" class="box">
@@ -57,7 +57,7 @@
     <hr>
     <div id="modes" class="box">
         <h3>Modes:</h3>
-        <p>The gray pointer graphic is a mode.</p>
+        <p>The gray pointer graphic, preview image box, and preview image information overlays are modes.</p>
     </div>
 </body>
 </html>

@@ -205,13 +205,67 @@ a {
     animation: cart_itemsanim .5s forwards;
 }
 @keyframes cart_itemsanim {
-    0% {opacity: 0%;}
-    100% {opacity: 100%; transform: translateX(-300px);}
+    0% {opacity: 0%; transform: scaleX(0.01);}
+    100% {opacity: 100%; transform: scaleX(1); transform: translateX(-335px);}
 }
 .cart_itemsanim2 {
     animation: cart_itemsanim2 .5s forwards;
 }
 @keyframes cart_itemsanim2 {
-    0% {opacity: 100%; transform: translateX(-300px);}
+    0% {opacity: 100%; transform: scaleX(1); transform: translateX(-335px);}
+    100% {opacity: 0%; transform: scaleX(0.01);}
+}
+
+#gourdimg {
+    opacity: 0%;
+}
+.gourdanim {
+    animation: gourdanim .2s forwards;
+}
+@keyframes gourdanim {
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
+}
+.gourdanim2 {
+    animation: gourdanim2 .2s forwards;
+}
+@keyframes gourdanim2 {
+    0% {opacity: 100%;}
+    100% {opacity: 0%;}
+}
+
+#keycapimg {
+    opacity: 0%;
+}
+.keycapanim {
+    animation: keycapanim .2s forwards;
+}
+@keyframes keycapanim {
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
+}
+.keycapanim2 {
+    animation: keycapanim2 .2s forwards;
+}
+@keyframes keycapanim2 {
+    0% {opacity: 100%;}
+    100% {opacity: 0%;}
+}
+
+#buttonsimg {
+    opacity: 0%;
+}
+.buttonsanim {
+    animation: buttonsanim .2s forwards;
+}
+@keyframes buttonsanim {
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
+}
+.buttonsanim2 {
+    animation: buttonsanim2 .2s forwards;
+}
+@keyframes buttonsanim2 {
+    0% {opacity: 100%;}
     100% {opacity: 0%;}
 }
