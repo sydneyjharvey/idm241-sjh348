@@ -1,0 +1,48 @@
+html {
+    background-color: white;
+    color:darkslategray;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    margin: auto;
+    padding: 20px 10%;
+    text-align: left;
+}
+h3 {
+    padding-left: 5%;
+}
+#header {
+    text-align: center;
+}
+#box {
+    display: grid;
+    grid-template-columns: max-content;
+    grid-template-rows: 70%;
+    grid-template-areas: 
+    "trigger"
+    "rules"
+    "feedback"
+    "loops"
+    "modes";
+}
+hr {
+    color:mediumaquamarine;
+}
+a {
+    color:mediumaquamarine;
+}
+
+.examples {
+    margin: auto;
+    padding: 20px 10%;
+}
+
+.images {
+    border: 3px solid mediumaquamarine;
+    max-width: 100%;
+    position:relative;
+}
+
+.spacer {
+    height:100px;
+}
