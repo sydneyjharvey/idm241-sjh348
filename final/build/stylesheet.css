@@ -1,0 +1,271 @@
+html {
+    background-color: white;
+    color:darkslategray;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    margin: auto;
+    padding: 20px 10%;
+    text-align: left;
+}
+h3 {
+    padding-left: 5%;
+}
+#header {
+    text-align: center;
+}
+#box {
+    display: grid;
+    grid-template-columns: max-content;
+    grid-template-rows: 70%;
+    grid-template-areas: 
+    "trigger"
+    "rules"
+    "feedback"
+    "loops"
+    "modes";
+}
+hr {
+    color:mediumaquamarine;
+}
+a {
+    color:mediumaquamarine;
+}
+
+.images {
+    border: 3px solid mediumaquamarine;
+    width: 100px;
+    position:relative;
+}
+
+.spacer {
+    height:100px;
+}
+
+#element {
+    top: 0px;
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+}
+#cart_locate {
+    width: 23px;
+    height: 21px;
+    margin-left:26px;
+    margin-top: 37px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#pointer_locate {
+    width: 52;
+    height: 47;
+    margin-left:0px;
+    margin-top: 50px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#circle_locate {
+    width: 55px;
+    height: 55px;
+    margin-left: 10.5px;
+    margin-top: 20px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#number_locate {
+    width: 17px;
+    height: 17px;
+    margin-left: 44px;
+    margin-top: 28px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gourd {
+    width: 90px;
+    height: 90px;
+    margin-left: 5px;
+    margin-top: 5px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.keycap {
+    width: 90px;
+    height: 90px;
+    margin-left: 100px;
+    margin-top: 5px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttons {
+    width: 90px;
+    height: 90px;
+    margin-left: 195px;
+    margin-top: 5px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#box_locate {
+    width: 290px;
+    height: 100px;
+    margin-left: 0px;
+    margin-top: 0px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#cart_items {
+    margin-left: 50px;
+    margin-top: 0px;
+}
+
+#cart {
+    width: 100%;
+}
+.cartanim {
+    animation: cartanim .5s forwards;
+}
+@keyframes cartanim {
+    0% {transform: rotate(0deg);}
+    33% {transform: rotate(-15deg);}
+    66% {transform: rotate(15deg);}
+    100% {transform: rotate(0deg);}
+}
+.cartanim2 {
+    animation: cartanim2 .5s forwards;
+}
+@keyframes cartanim2 {
+    0% {transform: rotate(0deg);}
+    33% {transform: rotate(15deg);}
+    66% {transform: rotate(-15deg);}
+    100% {transform: rotate(0deg);}
+}
+
+#pointer {
+    width: 100%;
+    opacity: 0%;
+}
+.pointeranim {
+    animation: pointeranim .5s forwards;
+}
+@keyframes pointeranim {
+    0% {opacity: 0%;}
+    70% {transform: translateY(30px);}
+    100% {transform: translateY(25px); opacity: 100%;}
+}
+.pointeranim2 {
+    animation: pointeranim2 .5s forwards;
+}
+@keyframes pointeranim2 {
+    0% {transform: translateY(25px); opacity: 100%;}
+    30% {transform: translateY(30px);}
+    100% {opacity: 0%;}
+}
+
+#circle {
+    width: 100%;
+    opacity: 0%;
+}
+.circleanim {
+    animation: circleanim .5s forwards;
+}
+@keyframes circleanim {
+    0% {width: 0%; opacity: 0%;}
+    70% {width: 100%; opacity: 70%;}
+    100% {width: 91%; opacity: 100%;} 
+}
+.circleanim2 {
+    animation: circleanim2 .5s forwards;
+}
+@keyframes circleanim2 {
+    0% {width: 91%; opacity: 100%;}
+    30% {width: 100%; opacity: 70%;}
+    100% {width: 0%; opacity: 0%;}
+}
+
+#cart_items {
+    width: 100%;
+    opacity: 0%;
+}
+.cart_itemsanim {
+    animation: cart_itemsanim .5s forwards;
+}
+@keyframes cart_itemsanim {
+    0% {opacity: 0%; transform: scaleX(0.01);}
+    100% {opacity: 100%; transform: scaleX(1); transform: translateX(-335px);}
+}
+.cart_itemsanim2 {
+    animation: cart_itemsanim2 .5s forwards;
+}
+@keyframes cart_itemsanim2 {
+    0% {opacity: 100%; transform: scaleX(1); transform: translateX(-335px);}
+    100% {opacity: 0%; transform: scaleX(0.01);}
+}
+
+#gourdimg {
+    opacity: 0%;
+}
+.gourdanim {
+    animation: gourdanim .2s forwards;
+}
+@keyframes gourdanim {
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
+}
+.gourdanim2 {
+    animation: gourdanim2 .2s forwards;
+}
+@keyframes gourdanim2 {
+    0% {opacity: 100%;}
+    100% {opacity: 0%;}
+}
+
+#keycapimg {
+    opacity: 0%;
+}
+.keycapanim {
+    animation: keycapanim .2s forwards;
+}
+@keyframes keycapanim {
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
+}
+.keycapanim2 {
+    animation: keycapanim2 .2s forwards;
+}
+@keyframes keycapanim2 {
+    0% {opacity: 100%;}
+    100% {opacity: 0%;}
+}
+
+#buttonsimg {
+    opacity: 0%;
+}
+.buttonsanim {
+    animation: buttonsanim .2s forwards;
+}
+@keyframes buttonsanim {
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
+}
+.buttonsanim2 {
+    animation: buttonsanim2 .2s forwards;
+}
+@keyframes buttonsanim2 {
+    0% {opacity: 100%;}
+    100% {opacity: 0%;}
+}
