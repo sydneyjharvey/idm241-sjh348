@@ -316,3 +316,12 @@ li.plus {
     0% {opacity: 100%;}
     100% {opacity: 0%;}
 }
+
+.cart_wholeanim {
+    animation: cart_wholeanim 2s infinite;
+}
+@keyframes cart_wholeanim {
+    0% {opacity: 100%}
+    50% {opacity: 70%;}
+    100% {opacity: 100%;}
+}
