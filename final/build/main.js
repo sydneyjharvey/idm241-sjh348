@@ -103,7 +103,7 @@ async function buttonsLeave() {
 }
 
 
-let cart_number = 3;
+let cart_numb = 3;
 
 const gourd_value = 8.99;
 let gourd_number = 1;
@@ -115,7 +115,7 @@ const buttons_value = 2.24;
 let buttons_number = 1;
 
 function stringToHTML() {
-    var gourd_cost = gourd_value * gourd_number;
+    var gourd_cost = (Math.round((gourd_value * gourd_number) * 100) / 100).toFixed(2);
     var gourd_text1 = "$" + String(gourd_value) + " x" + String(gourd_number);
     var gourd_text2 = "$" + String(gourd_cost);
     console.log(gourd_text1);
@@ -124,7 +124,7 @@ function stringToHTML() {
     g_text2.innerHTML = gourd_text2;
     g_text3.innerHTML = gourd_number;
 
-    var keycap_cost = keycap_value * keycap_number;
+    var keycap_cost = (Math.round((keycap_value * keycap_number) * 100) / 100).toFixed(2);
     var keycap_text1 = "$" + String(keycap_value) + " x" + String(keycap_number);
     var keycap_text2 = "$" + String(keycap_cost);
     console.log(keycap_text1);
@@ -133,7 +133,7 @@ function stringToHTML() {
     k_text2.innerHTML = keycap_text2;
     k_text3.innerHTML = keycap_number;
 
-    var buttons_cost = buttons_value * buttons_number;
+    var buttons_cost = (Math.round((buttons_value * buttons_number) * 100) / 100).toFixed(2);
     var buttons_text1 = "$" + String(buttons_value) + " x" + String(buttons_number);
     var buttons_text2 = "$" + String(buttons_cost);
     console.log(buttons_text1);
@@ -141,6 +141,8 @@ function stringToHTML() {
     b_text1.innerHTML = buttons_text1;
     b_text2.innerHTML = buttons_text2;
     b_text3.innerHTML = buttons_number;
+
+    cart_number.innerHTML = cart_numb;
 }
 stringToHTML();
 
@@ -150,6 +152,7 @@ g_less_btn.addEventListener('click', function() {
     console.log('Gourd-1');
     if (gourd_number > 0) {
         gourd_number = gourd_number - 1;
+        cart_numb = cart_numb - 1;
         console.log("1 less gourd!")
         stringToHTML();
     }
@@ -163,6 +166,7 @@ const g_more_btn = document.getElementById('G+');
 g_more_btn.addEventListener('click', function() {
     console.log('Gourd+1');
     gourd_number = gourd_number + 1;
+    cart_numb = cart_numb + 1;
     console.log("1 more gourd!")
     stringToHTML();
 });
@@ -173,6 +177,7 @@ k_less_btn.addEventListener('click', function() {
     console.log('Keycap-1');
     if (keycap_number > 0) {
         keycap_number = keycap_number - 1;
+        cart_numb = cart_numb - 1;
         console.log("1 less keycap!")
         stringToHTML();
     }
@@ -186,6 +191,7 @@ const k_more_btn = document.getElementById('K+');
 k_more_btn.addEventListener('click', function() {
     console.log('Keycap+1');
     keycap_number = keycap_number + 1;
+    cart_numb = cart_numb + 1;
     console.log("1 more keycap!")
     stringToHTML();
 });
@@ -196,6 +202,7 @@ b_less_btn.addEventListener('click', function() {
     console.log('Buttons-1');
     if (buttons_number > 0) {
         buttons_number = buttons_number - 1;
+        cart_numb = cart_numb - 1;
         console.log("1 less buttons!")
         stringToHTML();
     }
@@ -209,6 +216,7 @@ const b_more_btn = document.getElementById('B+');
 b_more_btn.addEventListener('click', function() {
     console.log('Buttons+1');
     buttons_number = buttons_number + 1;
+    cart_numb = cart_numb + 1;
     console.log("1 more buttons!")
     stringToHTML();
 });
