@@ -107,15 +107,40 @@ let cart_number = 3;
 
 const gourd_value = 8.99;
 let gourd_number = 1;
-let gourd_cost = 1;
 
-const cap_value = 1.19;
-let cap_number = 1;
-let cap_cost = 1;
+function stringToHTML() {
+    var gourd_cost = gourd_value * gourd_number;
+    var gourd_text1 = "$" + String(gourd_value) + " x" + String(gourd_number);
+    var gourd_text2 = "$" + String(gourd_cost);
+    console.log(gourd_text1);
+    console.log(gourd_text2);
+    g_text1.innerHTML = gourd_text1;
+    console.log("step 1");
+    g_text2.innerHTML = gourd_text2;
+    console.log("step 2");
+    g_text3.innerHTML = gourd_number;
+}
+stringToHTML();
 
-const button_value = 2.24;
-let button_number = 1;
-let button_cost = 1;
+const g_less_btn = document.getElementById('G-');
 
-let gourd_text1 = "$" + "gourd_value" + " x" + "gourd_number";
-let gourd_text2 = "$" + "gourd_cost";
+g_less_btn.addEventListener('click', function() {
+    console.log('Gourd-1');
+    if (gourd_number > 0) {
+        gourd_number = gourd_number - 1;
+        console.log("1 less gourd!")
+        stringToHTML();
+    }
+    else {
+        console.log("Gourd Number = 0!")
+    }
+});
+
+const g_more_btn = document.getElementById('G+');
+
+g_more_btn.addEventListener('click', function() {
+    console.log('Gourd+1');
+    gourd_number = gourd_number + 1;
+    console.log("1 more gourd!")
+    stringToHTML();
+});
