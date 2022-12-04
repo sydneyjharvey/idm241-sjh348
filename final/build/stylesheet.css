@@ -129,7 +129,7 @@ a {
     align-items: center;
 }
 
-.gourd_txt {
+.item_txt {
     font-family: "Open Sans", sans-serif;
     font-weight: 700;
     font-size: 12px;
@@ -139,12 +139,12 @@ a {
     text-align:center;
     line-height: 1px;
 }
-#g_text2 {
+.text2 {
     font-size: 14px;
 }
 .button_locate {
     display:grid;
-    grid-template-areas: "minus g_text3 plus";
+    grid-template-areas: "minus text3 plus";
     grid-template-rows: 20px 20px 20px;
 }
 .z_button {
@@ -256,7 +256,7 @@ li.plus {
     100% {opacity: 0%; transform: scaleX(0.01);}
 }
 
-#gourdimg {
+#gourd_overlay {
     opacity: 0%;
 }
 .gourdanim {
@@ -274,7 +274,7 @@ li.plus {
     100% {opacity: 0%;}
 }
 
-#keycapimg {
+#keycap_overlay {
     opacity: 0%;
 }
 .keycapanim {
@@ -292,7 +292,7 @@ li.plus {
     100% {opacity: 0%;}
 }
 
-#buttonsimg {
+#buttons_overlay {
     opacity: 0%;
 }
 .buttonsanim {

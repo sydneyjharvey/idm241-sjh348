@@ -39,67 +39,67 @@ async function cartLeave() {
     cart_items.classList.remove("cart_itemsanim");
 }
 
-document.getElementById("gourdimg").addEventListener("mouseenter", gourdEnter);
+document.getElementById("gourd_overlay").addEventListener("mouseenter", gourdEnter);
 
 async function gourdEnter() {
     console.log("gourdEnter");
     await sleep(50);
-    gourdimg.classList.add("gourdanim");
+    gourd_overlay.classList.add("gourdanim");
     console.log("2");
     await sleep(50);
-    gourdimg.classList.remove("gourdanim2");
+    gourd_overlay.classList.remove("gourdanim2");
 }
-document.getElementById("gourdimg").addEventListener("mouseleave", gourdLeave);
+document.getElementById("gourd_overlay").addEventListener("mouseleave", gourdLeave);
 
 async function gourdLeave() {
     console.log("gourdLeave");
     await sleep(50);
-    gourdimg.classList.add("gourdanim2");
+    gourd_overlay.classList.add("gourdanim2");
     console.log("2");
     await sleep(50);
-    gourdimg.classList.remove("gourdanim");
+    gourd_overlay.classList.remove("gourdanim");
 }
 
-document.getElementById("keycapimg").addEventListener("mouseenter", keycapEnter);
+document.getElementById("keycap_overlay").addEventListener("mouseenter", keycapEnter);
 
 async function keycapEnter() {
     console.log("keycapEnter");
     await sleep(50);
-    keycapimg.classList.add("keycapanim");
+    keycap_overlay.classList.add("keycapanim");
     console.log("2");
     await sleep(50);
-    keycapimg.classList.remove("keycapanim2");
+    keycap_overlay.classList.remove("keycapanim2");
 }
-document.getElementById("keycapimg").addEventListener("mouseleave", keycapLeave);
+document.getElementById("keycap_overlay").addEventListener("mouseleave", keycapLeave);
 
 async function keycapLeave() {
     console.log("keycapLeave");
     await sleep(50);
-    keycapimg.classList.add("keycapanim2");
+    keycap_overlay.classList.add("keycapanim2");
     console.log("2");
     await sleep(50);
-    keycapimg.classList.remove("keycapanim");
+    keycap_overlay.classList.remove("keycapanim");
 }
 
-document.getElementById("buttonsimg").addEventListener("mouseenter", buttonsEnter);
+document.getElementById("buttons_overlay").addEventListener("mouseenter", buttonsEnter);
 
 async function buttonsEnter() {
     console.log("buttonsEnter");
     await sleep(50);
-    buttonsimg.classList.add("buttonsanim");
+    buttons_overlay.classList.add("buttonsanim");
     console.log("2");
     await sleep(50);
-    buttonsimg.classList.remove("buttonsanim2");
+    buttons_overlay.classList.remove("buttonsanim2");
 }
-document.getElementById("buttonsimg").addEventListener("mouseleave", buttonsLeave);
+document.getElementById("buttons_overlay").addEventListener("mouseleave", buttonsLeave);
 
 async function buttonsLeave() {
     console.log("buttonsLeave");
     await sleep(50);
-    buttonsimg.classList.add("buttonsanim2");
+    buttons_overlay.classList.add("buttonsanim2");
     console.log("2");
     await sleep(50);
-    buttonsimg.classList.remove("buttonsanim");
+    buttons_overlay.classList.remove("buttonsanim");
 }
 
 
@@ -108,6 +108,12 @@ let cart_number = 3;
 const gourd_value = 8.99;
 let gourd_number = 1;
 
+const keycap_value = 1.89;
+let keycap_number = 1;
+
+const buttons_value = 2.24;
+let buttons_number = 1;
+
 function stringToHTML() {
     var gourd_cost = gourd_value * gourd_number;
     var gourd_text1 = "$" + String(gourd_value) + " x" + String(gourd_number);
@@ -115,10 +121,26 @@ function stringToHTML() {
     console.log(gourd_text1);
     console.log(gourd_text2);
     g_text1.innerHTML = gourd_text1;
-    console.log("step 1");
     g_text2.innerHTML = gourd_text2;
-    console.log("step 2");
     g_text3.innerHTML = gourd_number;
+
+    var keycap_cost = keycap_value * keycap_number;
+    var keycap_text1 = "$" + String(keycap_value) + " x" + String(keycap_number);
+    var keycap_text2 = "$" + String(keycap_cost);
+    console.log(keycap_text1);
+    console.log(keycap_text2);
+    k_text1.innerHTML = keycap_text1;
+    k_text2.innerHTML = keycap_text2;
+    k_text3.innerHTML = keycap_number;
+
+    var buttons_cost = buttons_value * buttons_number;
+    var buttons_text1 = "$" + String(buttons_value) + " x" + String(buttons_number);
+    var buttons_text2 = "$" + String(buttons_cost);
+    console.log(buttons_text1);
+    console.log(buttons_text2);
+    b_text1.innerHTML = buttons_text1;
+    b_text2.innerHTML = buttons_text2;
+    b_text3.innerHTML = buttons_number;
 }
 stringToHTML();
 
@@ -142,5 +164,51 @@ g_more_btn.addEventListener('click', function() {
     console.log('Gourd+1');
     gourd_number = gourd_number + 1;
     console.log("1 more gourd!")
+    stringToHTML();
+});
+
+const k_less_btn = document.getElementById('K-');
+
+k_less_btn.addEventListener('click', function() {
+    console.log('Keycap-1');
+    if (keycap_number > 0) {
+        keycap_number = keycap_number - 1;
+        console.log("1 less keycap!")
+        stringToHTML();
+    }
+    else {
+        console.log("Keycap Number = 0!")
+    }
+});
+
+const k_more_btn = document.getElementById('K+');
+
+k_more_btn.addEventListener('click', function() {
+    console.log('Keycap+1');
+    keycap_number = keycap_number + 1;
+    console.log("1 more keycap!")
+    stringToHTML();
+});
+
+const b_less_btn = document.getElementById('B-');
+
+b_less_btn.addEventListener('click', function() {
+    console.log('Buttons-1');
+    if (buttons_number > 0) {
+        buttons_number = buttons_number - 1;
+        console.log("1 less buttons!")
+        stringToHTML();
+    }
+    else {
+        console.log("Buttons Number = 0!")
+    }
+});
+
+const b_more_btn = document.getElementById('B+');
+
+b_more_btn.addEventListener('click', function() {
+    console.log('Buttons+1');
+    buttons_number = buttons_number + 1;
+    console.log("1 more buttons!")
     stringToHTML();
 });
